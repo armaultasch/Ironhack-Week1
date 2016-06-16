@@ -3,3 +3,5 @@ classmates = ["Andres", "John", "Rachel"]
  	puts "Good morning #{name}"
  	
  end
+
+ 

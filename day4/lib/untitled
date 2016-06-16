@@ -1,0 +1,11 @@
+wheel_count.rb
+class WheelCounter
+	def initialize
+		@vehicles = []
+	end
+
+	def wheel_count
+		count = @vehicles.reduce(0.0) do |sum, wh|
+	sum + hm.wheels
+		end
+	end
