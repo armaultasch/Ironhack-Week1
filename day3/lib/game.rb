@@ -19,7 +19,7 @@ class Game
 	def move_room
 		puts @rooms[@position].message
 		input = gets.chomp
-			if input == @rooms[@position].exit
+			if input == @rooms[@position].exit.downcase
 
 		@position += 1
 		move_room
@@ -32,7 +32,7 @@ class Game
 		end
 
 	end
+
+
+
 end
-	
-
-

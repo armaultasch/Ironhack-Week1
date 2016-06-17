@@ -9,6 +9,22 @@ Room4 = Room.new("N", "You are in the fourth room. There are treats [N] of here.
 Room5 = Room.new("E", "You are in the fifth room. The prize is [E] of here.\n >")
 Room6 = Room.new("S", "You Won! You are in the sixth and final room! Type [exit] to get the fuck out")
 my_game = Game.new
+my_inventory = Inventory.new
+
+my_inventory.add_item("truth_sword")
+my_inventory.add_item("jew_gold")
+my_inventory.add_item("joint")
+
+# def use_item(items)
+# 	puts "Do you want to see what you have to play with?"
+# 	user_play = gets.chomp
+# 		if "#{user_play}" == "yes"
+# 	puts @items
+# 	end
+# end
+# my_inventory.use_item
+my_inventory.get_item
+
 
 
 
@@ -19,7 +35,7 @@ my_game.add_rooms(Room4)
 my_game.add_rooms(Room5)
 my_game.add_rooms(Room6)
 
-my_game.move_room
+#my_game.move_room
 
 
 # exit = nil
