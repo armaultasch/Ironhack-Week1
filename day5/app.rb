@@ -4,6 +4,7 @@ require_relative("lib/bishop.rb")
 require_relative("lib/knight.rb")
 require_relative("lib/queen.rb")
 require_relative("lib/pawn.rb")
+require_relative("lib/board.rb")
 
 black_rook_right = Rook.new(8, 8, "black")
 
@@ -87,6 +88,17 @@ p white_pawn.can_move?(5,4) == false
 
 
 
+
+puts "My board tests"
+my_board = Board.new
+
+my_board.add_piece(white_knight)
+my_board.add_piece(white_bishop)
+
+p my_board.board_can_move?(5, 4, 6, 6) == true
+p my_board.board_can_move?(5, 4, 7, 3) == true
+p my_board.board_can_move?(4, 5, 3, 4) == true
+p my_board.board_can_move?(57, 57, 7, 8) == false
 
 
 
