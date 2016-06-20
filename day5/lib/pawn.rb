@@ -2,9 +2,10 @@ require_relative("pieces.rb")
 
 class Pawn < Piece
 	def can_move?(final_x, final_y)
-		@final_x = final_x
-		@final_y = final_y
-		if ((@final_y >= 8) || (@final_y <= 1))
+		final_x = @x
+		change_y = (final_y - @y).abs
+		if (@x == @final_x) 
+			if ((@final_y >= 8) || (@final_y <= 1))
 			false
 		elsif	((@x == @final_x) &&  (@colour == "black")) 
 			if ((@y < 7) && (@y > 1))
