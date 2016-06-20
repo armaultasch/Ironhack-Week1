@@ -1,13 +1,9 @@
-class Rook
-	def initialize(x, y, colour)
-		@x = x
-		@y = y
-		@colour = colour
-	end
+require_relative("pieces.rb")
 
+class Rook < Piece
 	def can_move?(final_x, final_y)
-		if @x == final_x || @y = final_y
-				true
+		if ((@x == final_x) || (@y == final_y))
+			 true
 		else 
 			false
 		end
